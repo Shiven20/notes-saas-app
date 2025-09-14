@@ -25,42 +25,45 @@ It allows multiple companies (**tenants**) to manage users, create notes, and ha
 
 ## 🏗️ Project Structure
 
+## 📂 Project Structure
+
+```bash
 notes_saas/
-│── backend/ # Express.js + MongoDB API
-│ │── src/
-│ │ │── models/
-│ │ │ │── Tenant.js
-│ │ │ │── User.js
-│ │ │ │── Note.js
-│ │ │ │── upgradeRequest.js
-│ │ │
-│ │ │── routes/
-│ │ │ │── auth.js
-│ │ │ │── notes.js
-│ │ │ │── tenants.js
-│ │ │ │── upgrades.js
-│ │ │
-│ │ │── middleware/
-│ │ │ │── auth.js # JWT middleware
-│ │ │
-│ │ │── server.js # Express app entrypoint
-│ │
-│ │── package.json
-│ │── .env # DB connection + secrets
+│── backend/                 # Express.js + MongoDB API
+│   └── src/
+│       ├── models/          
+│       │   ├── Tenant.js
+│       │   ├── User.js
+│       │   ├── Note.js
+│       │   └── upgradeRequest.js
+│       │
+│       ├── routes/          
+│       │   ├── auth.js
+│       │   ├── notes.js
+│       │   ├── tenants.js
+│       │   └── upgrades.js
+│       │
+│       ├── middleware/
+│       │   └── auth.js      # JWT middleware
+│       │
+│       └── server.js        # Express app entrypoint
 │
-│── frontend/ # React (Vite) frontend
-│ │── src/
-│ │ │── pages/
-│ │ │ │── Login.jsx
-│ │ │ │── Notes.jsx
-│ │ │ │── AdminDashboard.jsx
-│ │ │
-│ │ │── App.jsx
-│ │ │── main.jsx
-│ │
-│ │── package.json
+│   ├── package.json
+│   └── .env                 # DB connection + secrets
 │
-│── README.md
+│── frontend/                # React (Vite) frontend
+│   └── src/
+│       ├── pages/
+│       │   ├── Login.jsx
+│       │   ├── Notes.jsx
+│       │   └── AdminDashboard.jsx
+│       │
+│       ├── App.jsx
+│       └── main.jsx
+│
+│   └── package.json
+│
+└── README.md
 
 
 ---
