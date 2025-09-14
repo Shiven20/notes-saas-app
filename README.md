@@ -26,6 +26,22 @@ The app is deployed on **Vercel**:
 | User (Globex)   | user@globex.test       | password  |
 
 ---
+## 🏢 Multi-Tenant Architecture Choice
+
+👉 We use **Shared Database with a `tenantId` field** to separate tenants.
+
+### ✅ Why this approach?
+- **Simplicity** → All tenants share the same DB & collections, with `tenantId` ensuring isolation.  
+- **Cost-efficient** → Only one database to manage (lower hosting & infra costs).  
+- **Scalability** → Easy to add new tenants by just inserting records with a new `tenantId`.  
+- **Faster development** → No need to manage multiple schemas or databases.  
+
+### ⚖️ Advantages over other approaches
+- **Vs Separate Schema per Tenant** → Avoids schema migration issues when code changes; easier to maintain.  
+- **Vs Separate Database per Tenant** → Cheaper, easier to scale for many small tenants; no DB connection overhead.  
+
+This model is best for **SaaS apps with many small/medium tenants** where strict data isolation at DB level is not mandatory.
+```
 
 ## 🚀 Features
 
