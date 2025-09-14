@@ -1,8 +1,12 @@
 # 📒 Notes SaaS App
 
-A **multi-tenant Notes SaaS application** built with **React (Vite) frontend, Express.js + MongoDB backend**, and **JWT authentication**.  
+A **multi-tenant Notes SaaS application** built with **React (Vite)** for the frontend, **Express.js + MongoDB** for the backend, and **JWT authentication**.  
 
-It allows multiple companies (**tenants**) to manage users, create notes, and handle **subscription upgrades with admin approval**.
+The system allows multiple companies (**tenants**) to:  
+- Manage users  
+- Create and manage notes  
+- Handle **subscription upgrades with admin approval**  
+
 ---
 
 ## 🌍 Deployment
@@ -11,34 +15,37 @@ The app is deployed on **Vercel**:
 👉 [Live Demo](https://notes-saas-c9ag2cd4i-shiven2.vercel.app/)
 
 ---
-## Roles and test accounts
-Admin (Acme)    → admin@acme.test / password
-User (Acme)     → user@acme.test / password
-Admin (Globex)  → admin@globex.test / password
-User (Globex)   → user@globex.test / password
 
-```
+## 👥 Roles & Test Accounts
+
+| Role            | Email                  | Password  |
+|-----------------|------------------------|-----------|
+| Admin (Acme)    | admin@acme.test        | password  |
+| User (Acme)     | user@acme.test         | password  |
+| Admin (Globex)  | admin@globex.test      | password  |
+| User (Globex)   | user@globex.test       | password  |
+
+---
 
 ## 🚀 Features
 
-- 🔑 **User Authentication** (JWT-based login & signup).  
+- 🔑 **User Authentication** (JWT-based login & signup)  
 - 🏢 **Multi-Tenant Architecture**  
-  - Shared database with `tenantId` field for separation.  
-  - Users and notes are always scoped to their tenant.  
+  - Shared database with `tenantId` for separation  
+  - Users and notes are always scoped to their tenant  
 - 📝 **Notes Management**  
-  - Create, read, delete notes.  
-  - Free plan allows up to **3 notes**.  
+  - Create, read, delete notes  
+  - Free plan allows up to **3 notes**  
 - 💳 **Subscription Upgrade Flow**  
-  - Users can request upgrade to **Pro** plan.  
-  - Tenant Admin receives request → approves/rejects.  
-  - On approval, user can create unlimited notes.  
-- 🎨 **Responsive UI** styled with **Tailwind CSS**.  
-- 🔐 **Role-based access** (Admin vs User dashboards).  
+  - Users can request upgrade to **Pro** plan  
+  - Tenant Admin approves/rejects requests  
+  - Approved users can create unlimited notes  
+- 🔐 **Role-based Access** (Admin vs User dashboards)  
+- 🎨 **Responsive UI** with **Tailwind CSS**  
 
 ---
 
 ## 🏗️ Project Structure
-
 
 ```bash
 notes_saas/
@@ -78,8 +85,6 @@ notes_saas/
 │
 └── README.md
 
-
----
 ```
 
 ## 🛠️ Tech Stack
