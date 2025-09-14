@@ -28,15 +28,17 @@ It allows multiple companies (**tenants**) to manage users, create notes, and ha
 notes_saas/
 │── backend/ # Express.js + MongoDB API
 │ │── src/
-│ │ │── models/ # Mongoose models
+│ │ │── models/
 │ │ │ │── Tenant.js
 │ │ │ │── User.js
 │ │ │ │── Note.js
+│ │ │ │── upgradeRequest.js
 │ │ │
-│ │ │── routes/ # API routes
+│ │ │── routes/
 │ │ │ │── auth.js
 │ │ │ │── notes.js
 │ │ │ │── tenants.js
+│ │ │ │── upgrades.js
 │ │ │
 │ │ │── middleware/
 │ │ │ │── auth.js # JWT middleware
@@ -51,6 +53,7 @@ notes_saas/
 │ │ │── pages/
 │ │ │ │── Login.jsx
 │ │ │ │── Notes.jsx
+│ │ │ │── AdminDashboard.jsx
 │ │ │
 │ │ │── App.jsx
 │ │ │── main.jsx
