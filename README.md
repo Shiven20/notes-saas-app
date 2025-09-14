@@ -2,8 +2,16 @@
 
 A **multi-tenant Notes SaaS application** built with **React (Vite) frontend, Express.js + MongoDB backend**, and **JWT authentication**.  
 It allows multiple companies (**tenants**) to manage users, create notes, and handle **subscription upgrades with admin approval**.
+---
+
+## 🌍 Deployment
+
+The app is deployed on **Vercel**:  
+👉 [Live Demo](https://notes-saas-c9ag2cd4i-shiven2.vercel.app/)
 
 ---
+
+
 
 ## 🚀 Features
 
@@ -25,7 +33,6 @@ It allows multiple companies (**tenants**) to manage users, create notes, and ha
 
 ## 🏗️ Project Structure
 
-## 📂 Project Structure
 
 ```bash
 notes_saas/
@@ -67,6 +74,7 @@ notes_saas/
 
 
 ---
+```
 
 ## 🛠️ Tech Stack
 
@@ -126,4 +134,10 @@ User:
   - Max 3 notes on Free plan
   - Unlimited after upgrade approval
 
+---
 
+## 👨‍💻 Author
+
+**Shiven Garg**  
+📧 Email: gargshiven046@gmail.com 
+🌐 GitHub: [Shiven20](https://github.com/Shiven20)  
