@@ -1,6 +1,7 @@
 # 📒 Notes SaaS App
 
 A **multi-tenant Notes SaaS application** built with **React (Vite) frontend, Express.js + MongoDB backend**, and **JWT authentication**.  
+
 It allows multiple companies (**tenants**) to manage users, create notes, and handle **subscription upgrades with admin approval**.
 ---
 
@@ -10,8 +11,13 @@ The app is deployed on **Vercel**:
 👉 [Live Demo](https://notes-saas-c9ag2cd4i-shiven2.vercel.app/)
 
 ---
+## Roles and test accounts
+Admin (Acme)    → admin@acme.test / password
+User (Acme)     → user@acme.test / password
+Admin (Globex)  → admin@globex.test / password
+User (Globex)   → user@globex.test / password
 
-
+```
 
 ## 🚀 Features
 
@@ -117,19 +123,16 @@ npm install
 
 # run frontend
 npm run dev
+```
 
-Roles and test accounts
-Admin (Acme)    → admin@acme.test / password
-User (Acme)     → user@acme.test / password
-Admin (Globex)  → admin@globex.test / password
-User (Globex)   → user@globex.test / password
 
-Admin:
+
+## Admin:
   - Invite users
   - Approve/reject subscription upgrades
   - Unlimited notes after upgrade
 
-User:
+## User:
   - Create, view, edit, delete notes
   - Max 3 notes on Free plan
   - Unlimited after upgrade approval
