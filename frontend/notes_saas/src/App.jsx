@@ -21,7 +21,7 @@ export default function App() {
 
   const handleLogin = async (email, password) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("https://notes-saas-app.onrender.com/api/auth/login", {
         email,
         password,
       });
@@ -71,7 +71,7 @@ export default function App() {
       }
 
       await axios.post(
-        "http://localhost:5000/api/upgrade/request",
+        "https://notes-saas-app.onrender.comapi/upgrade/request",
         { company: user.company, userEmail: user.email },
         {
           headers: {

@@ -15,7 +15,7 @@ export default function Notes({
 useEffect(() => {
   const checkStatus = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/upgrade/status", {
+      const res = await axios.get("https://notes-saas-app.onrender.com/api/upgrade/status", {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       if (res.data) {
@@ -43,7 +43,7 @@ const handleUpgrade = async () => {
   console.log("Token being sent:", user.token);
   try {
     await axios.post(
-      "http://localhost:5000/api/upgrade/request",
+      "https://notes-saas-app.onrender.com/api/upgrade/request",
       {},
       { headers: { Authorization: `Bearer ${user.token}` } }
     );

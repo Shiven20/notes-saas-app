@@ -10,7 +10,7 @@ export default function AdminDashboard({ user, onLogout }) {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/upgrade/pending", {
+        const res = await axios.get("https://notes-saas-app.onrender.com/api/upgrade/pending", {
           headers: { Authorization: `Bearer ${user.token}` },
         });
         setRequests(res.data);
@@ -25,7 +25,7 @@ export default function AdminDashboard({ user, onLogout }) {
   const handleApprove = async (id) => {
     try {
       await axios.post(
-        `http://localhost:5000/api/upgrade/approve/${id}`,
+        `https://notes-saas-app.onrender.com/api/upgrade/approve/${id}`,
         {},
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
@@ -40,7 +40,7 @@ export default function AdminDashboard({ user, onLogout }) {
   const handleReject = async (id) => {
     try {
       await axios.post(
-        `http://localhost:5000/api/upgrade/reject/${id}`,
+        `https://notes-saas-app.onrender.com/api/upgrade/reject/${id}`,
         {},
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
@@ -57,7 +57,7 @@ export default function AdminDashboard({ user, onLogout }) {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/api/invite",
+        "https://notes-saas-app.onrender.com/api/invite",
         { email: inviteEmail },
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
