@@ -41,7 +41,7 @@ The app is deployed on **Vercel**:
 - **Vs Separate Database per Tenant** → Cheaper, easier to scale for many small tenants; no DB connection overhead.  
 
 This model is best for **SaaS apps with many small/medium tenants** where strict data isolation at DB level is not mandatory.
-```
+
 
 ## 🚀 Features
 
